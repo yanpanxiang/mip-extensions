@@ -1,0 +1,14 @@
+{
+    "name": "mip-kp-list",
+    "version": "1.0.0",
+    "description": "该组件用于kp自身使用",
+    "contributors": [
+        {
+            "name": "",
+            "email": ""
+        }
+    ],
+    "engines": {
+        "mip": ">=1.1.0"
+    }
+}
