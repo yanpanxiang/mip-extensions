@@ -38,30 +38,28 @@ define(function (require) {
                 $('mip-infinitescroll').attr('data-src', 'http://www.dianjinghu.com/web.php?m=mip&c=Hsbd&a=indexDATA&type=' + url.type);
             }
             $('.list-tip-left').html(url.title);
-        } else if(url.key) {
+        }
+        else if (url.key) {
             $('mip-infinitescroll').attr('data-src', 'http://www.dianjinghu.com/web.php?m=mip&c=search&a=api&keyword=' + url.key);
-            setTimeout(function(){
-                if(!$('.mip-infinitescroll-results').html()){
-                     $('.noSearch').show();
-                     $('mip-infinitescroll').hide();
+            setTimeout(function () {
+                if (!$('.mip-infinitescroll-results').html()) {
+                    $('.noSearch').show();
+                    $('mip-infinitescroll').hide();
                 }
-            },1000)
-        } 
+            }, 1000);
+        }
         else {
-           $('.search-touch').on('click',function() {
+            $('.search-touch').on('click', function () {
                 var searchVal = $('.search-ipt').val();
-                if(!searchVal ){
+                if (!searchVal) {
                     $('.search-main').hide();
                     $('.noSearch').show();
-                }else{
-                     $(this).attr('href','search-result.html?key=' + searchVal);
                 }
-           })
+                else {
+                    $(this).attr('href', 'search-result.html?key=' + searchVal);
+                }
+            });
         }
-       
     };
-
     return customElement;
-
-    
 });
